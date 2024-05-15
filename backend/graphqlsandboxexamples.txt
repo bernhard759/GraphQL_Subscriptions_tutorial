@@ -1,0 +1,22 @@
+mutation AddBlog($content: String!, $author: String!){
+  addNewBlog(content: $content, author: $author) {
+    content
+    author 
+    id
+  }
+}
+
+subscription BlogStream {
+  newBlog {
+    content
+    author
+    id
+  }
+}
+
+
+
+{
+  "author": "bobby bobman 2",
+  "content": "hello my friends again here and there"
+}
